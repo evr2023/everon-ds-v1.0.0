@@ -19,7 +19,7 @@
 > **패키지** `everon-ds-v1.0.0.zip`  
 > **SHA256** `{자동 생성 — 배포 시 MANIFEST.json 참조}`  
 > **릴리즈 주관** DS Working Group / PMO  
-> **Sign-off** DSLead · QALead · PMO (3인 서명 완료)
+> **Sign-off**  인프라구축팀 · 플랫폼사업담당 · 전략기획실 (3인 서명 완료)
 
 ### 🎉 최초 정식 릴리즈 — 전사 배포
 
@@ -60,7 +60,7 @@ DS Guide · Figma Specbook · Component QA SOP 3종이 단일 패키지로 통�
 - **[NEW] 프레임 명명 기준** — `{ScreenName}/{Size}/{Mode}` 패턴 (예: `Dashboard-KPI/Desktop-1440/Light`)
 - **[NEW] 레이어 명명 기준** — 컴포넌트명 + 역할 (예: `ButtonPrimary/Label`, `CardKPI/Trend`)
 - **[NEW] DS Guide 크로스 레퍼런스 규칙** — `Specbook → Guide` 참조 방향·표기 방식 정의
-- **[NEW] Figma Library 배포 채널** — Community 초대 전용 링크 운영 (`figma.com/@everon/everon-ds`)
+- **[NEW] Figma Library 배포 채널** — Community 초대 전용 링크 운영 (`figma.com/@everon_develop`)
 
 ---
 
@@ -143,7 +143,6 @@ _초최 릴리즈로 해당 없음_
 ### [1.1.0] — 예정: 2026-Q3
 
 - **[NEW]** Stepper 컴포넌트 추가
-- **[NEW]** 다국어 지원 — 일본어(NotoSansJP) 타이포그래피 가이드
 - **[NEW]** 모바일 사이니지 컴포넌트 (QR/NFC 안내 패널)
 - **[NEW]** EVR-Finance-Report 템플릿 추가
 - **[IMPROVED]** Button에 'link' Variant 추가
@@ -173,5 +172,5 @@ _초최 릴리즈로 해당 없음_
 ---
 
 <p align="center">
-  <sub>everon Design System · CHANGELOG · DS Working Group · 2026</sub>
+  <sub>everon Design System · CHANGELOG · 2026</sub>
 </p>
