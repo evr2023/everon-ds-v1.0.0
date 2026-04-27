@@ -5,7 +5,7 @@
 [![Release](https://img.shields.io/badge/release-v1.0.0-12AAE2?style=flat-square)](https://github.com/everon/everon-ds/releases/tag/v1.0.0)
 [![License](https://img.shields.io/badge/license-Everon%20Proprietary-1A2C5B?style=flat-square)](#license)
 [![DS Guide](https://img.shields.io/badge/docs-DS%20Guide%20v1.0-0A6E95?style=flat-square)](./01_docs/EVR-DS-Guide-v1.0.pdf)
-[![Figma](https://img.shields.io/badge/Figma-everon--ds%20Library-12AAE2?style=flat-square&logo=figma&logoColor=white)](https://figma.com/@everon/everon-ds)
+[![Figma](https://img.shields.io/badge/Figma-everon--ds%20Library-12AAE2?style=flat-square&logo=figma&logoColor=white)](https://figma.com/@everon-develop/에버온 앱_차기ver)
 [![Slack](https://img.shields.io/badge/Slack-%23ds--release-6B7280?style=flat-square&logo=slack)](https://everon.slack.com/channels/ds-release)
 
 ---
@@ -85,13 +85,13 @@ Credibility  검증된 데이터와 절제된 표현으로 신뢰를 준다.
 3종 문서는 서로를 참조하는 단일 진실 공급원(Single Source of Truth)으로 운영됩니다.
 
 ```
-┌──────────────┐  규칙 정의  ┌───────────────────┐  구현 표준  ┌───────────────┐
+┌──────────────┐  규칙 정의    ┌───────────────────┐  구현 표준    ┌───────────────┐
 │   DS Guide   │ ──────────▶ │  Figma Specbook   │ ──────────▶ │    QA SOP     │
-│ (원칙·토큰)  │            │  (속성·Variant)   │            │  (검수 기준)  │
-└──────┬───────┘            └─────────┬─────────┘            └──────┬────────┘
-       │                              │                              │
-       └──────── 공통 참조: design-tokens.json · everon-icons ───────┘
-                                      │
+│ (원칙·토큰)  │               │  (속성·Variant)    │             │   (검수 기준)    │
+└──────┬───────┘             └─────────┬─────────┘             └───────┬───────┘
+       │                               │                                │
+       └──────── 공통 참조: design-tokens.json · everon-icons ───────────┘
+                                       │
               모든 제작물(IR·대시보드·UI·사이니지·인쇄물)이 3문서를 동시 참조
 ```
 
@@ -236,7 +236,7 @@ G4  릴리즈 최종 서명        DSLead · QALead · PMO 3인 Sign-off
 ### 디자이너
 
 ```
-1. Figma → 'everon-ds' 라이브러리 활성화 (초대 링크: ds@everon.co.kr)
+1. Figma → '에버온 앱_차기ver' 라이브러리 활성화 (초대 링크: everon79517@gmail.com)
 2. 04_templates/ 에서 PPT · Word 템플릿 다운로드
 3. DS Guide §5 사용 예시 참고하여 제작 시작
 4. 배포 전 30초 체크리스트 (§3.3) 자가 점검
