@@ -1,0 +1,16 @@
+{
+  "color-primary":        "#12AAE2",
+  "color-primary-deep":   "#0A6E95",
+  "color-neutral-dark":   "#1A2C5B",
+  "color-text-default":   "#111111",
+  "color-text-muted":     "#6B7280",
+  "color-bg-surface":     "#FFFFFF",
+  "color-bg-subtle":      "#F5F6FA",
+  "color-state-success":  "#00B15A",
+  "color-state-danger":   "#E8231A",
+  "font-family-base":     "Pretendard, NanumGothic, sans-serif",
+  "font-size-h1":         "32",
+  "radius-md":            "8",
+  "spacing-4":            "16",
+  "shadow-card":          "0 2px 8px rgba(17,17,17,0.06)"
+}
