@@ -1,0 +1,19 @@
+/ds-guide
+  ├── brand.md
+  ├── typography.md
+  ├── color.md
+  ├── components.md
+  └── spatial-guidelines.md
+
+/figma-specbook
+  ├── components/
+  ├── layout/
+  ├── spacing/
+  ├── tokens/
+  └── ev-zone/
+
+qa-sop
+  ├── checklist.md
+  ├── construction.md
+  ├── inspection.md
+  └── tolerance.md
