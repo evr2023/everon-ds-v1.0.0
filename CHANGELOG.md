@@ -347,8 +347,6 @@ git push origin v1.1.0
 
 ---
 
----
-
 # 11. GitHub Issue 템플릿
 
 ## 🐞 Bug Report (버그)
