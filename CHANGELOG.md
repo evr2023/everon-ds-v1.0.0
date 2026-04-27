@@ -1,456 +1,177 @@
-# Everon Design System – Implementation Pack
+# Changelog · `everon-ds`
 
-본 문서는 실제 실행 가능한 수준의 **Figma 구조 / Design Token(JSON) / QA 체크리스트**를 포함합니다.
+모든 주요 변경 사항을 이 파일에 기록합니다.  
+형식은 [Keep a Changelog](https://keepachangelog.com/ko/1.0.0/)를 따르며,  
+버전은 [Semantic Versioning](https://semver.org/lang/ko/)을 준수합니다.
 
----
-
-# 1. Figma 파일 구조 (실무형)
-
-## 📁 File: Everon_DS_v1.0.fig
-
-### Pages 구조
-
-1. **00_Foundation**
-
-   * Color Styles
-   * Typography
-   * Grid System
-   * Elevation
-
-2. **01_Tokens**
-
-   * Primitive Tokens
-   * Semantic Tokens
-
-3. **02_Components**
-
-   * Buttons
-   * Inputs
-   * Cards
-   * EV Charger UI
-
-4. **03_Patterns**
-
-   * Layout Templates
-   * EV Zone Layout
-
-5. **04_Spatial (중요)**
-
-   * Wall Graphics
-   * Parking Line System
-   * Signage
-
-6. **05_Specbook**
-
-   * 컴포넌트 상세 스펙
-   * 간격 / 수치 정의
+> **범례**
+> - `[BREAKING]` — 하위 호환 불가, MAJOR 변경
+> - `[NEW]` — 신규 추가, MINOR 변경
+> - `[IMPROVED]` — 개선·수정, MINOR 또는 PATCH
+> - `[DEPRECATED]` — 다음 버전에서 제거 예정
+> - `[FIXED]` — 버그·오탈자 수정, PATCH
+> - `[SECURITY]` — 보안 관련 변경
 
 ---
 
-## 🧱 Auto Layout 규칙
+## [1.0.0] — 2026-06-01 · Initial Release
 
-* Padding: 16 / 24 / 32 기준
-* Gap: 8pt grid
-* Radius: 8 / 16 / 999
+> **패키지** `everon-ds-v1.0.0.zip`  
+> **SHA256** `{자동 생성 — 배포 시 MANIFEST.json 참조}`  
+> **릴리즈 주관** DS Working Group / PMO  
+> **Sign-off** DSLead · QALead · PMO (3인 서명 완료)
 
----
+### 🎉 최초 정식 릴리즈 — 전사 배포
 
-# 2. Design Token (JSON)
-
-```json
-{
-  "color": {
-    "primary": {
-      "main": "#1E88E5",
-      "light": "#6AB7FF",
-      "dark": "#005CB2"
-    },
-    "neutral": {
-      "900": "#111111",
-      "700": "#555555",
-      "500": "#9E9E9E",
-      "100": "#F5F5F5"
-    }
-  },
-  "spacing": {
-    "xs": 4,
-    "sm": 8,
-    "md": 16,
-    "lg": 24,
-    "xl": 32
-  },
-  "radius": {
-    "sm": 8,
-    "md": 16,
-    "full": 999
-  },
-  "typography": {
-    "h1": {
-      "size": 32,
-      "weight": 700
-    },
-    "body": {
-      "size": 16,
-      "weight": 400
-    }
-  }
-}
-```
+에버온 디자인 시스템의 첫 번째 공식 릴리즈입니다.  
+DS Guide · Figma Specbook · Component QA SOP 3종이 단일 패키지로 통합 배포됩니다.
 
 ---
 
-# 3. EV 공간 디자인 규격
+#### Added — DS Guide v1.0 (`EVR-DS-GUIDE-v1.0`)
 
-## 📐 벽면 그래픽
-
-* 라운드 프레임 두께: 120mm
-* 내부 채움 비율: 70%
-* 로고 중심 정렬
-
-## 🚗 주차 라인
-
-* 라인 두께: 100mm
-* 색상: Primary
-* 텍스트 위치: 중앙 하단
-
----
-
-# 4. QA 체크리스트 (실무용)
-
-## 🧾 사전 검수
-
-* [ ] 도면과 시공 위치 일치
-* [ ] 컬러 코드 확인
-* [ ] 재질 확인
-
-## 🔧 시공 중
-
-* [ ] 수평/수직 정렬
-* [ ] 라인 두께 오차 ±5mm
-* [ ] 간격 오차 ±10mm
-
-## ✅ 완료 후
-
-* [ ] 브랜드 로고 위치 정확성
-* [ ] 조명 균일성
-* [ ] 오염 및 마감 상태
+- **[NEW] 디자인 원칙 3C 정의** — Clarity / Consistency / Credibility 원칙 및 실무 체크포인트 명문화
+- **[NEW] 컬러 시스템 확립** — Primary `#12AAE2` 기반 8종 팔레트, 60-30-10 사용 비율 가이드, 상태 컬러 매핑(Success / Info / Warning / Danger / Disabled)
+- **[NEW] WCAG AA 접근성 기준 적용** — 본문 4.5:1 이상, 대형 텍스트 3:1 이상 대비비 규칙 수립
+- **[NEW] 타이포그래피 체계** — Pretendard / NanumGothic 서체 지정, Display ~ Code까지 7단계 Role 정의
+- **[NEW] 그리드 & 레이아웃** — 슬라이드(12col) · 문서(6col) · Web Desktop(12col) · Mobile(4col) 매체별 기준 수립
+- **[NEW] 아이콘 · 이미지 · 모션 가이드** — everon-icons 전용 셋 지정, 이미지 보정 기준, 이징 200-300ms 규칙
+- **[NEW] Atomic Design 컴포넌트 체계** — Atoms / Molecules / Organisms 3계층 정의
+  - Button (Primary / Secondary / Ghost / Danger / Disabled) 5종 Variant
+  - Badge / Tag 상태 컬러 매핑
+  - Input 포커스·오류 상태
+  - Card(KPI · 콘텐츠 · 정보) / List / Form
+  - GlobalHeader / DashboardKPIGroup / Table
+  - 차트 유형별 컬러 매핑 (Bar / Line·Area / Donut / Combo)
+  - 사이니지 / 현장 전용 컴포넌트 (충전기 번호판, 상태 LED, 야간 가독성 기준)
+- **[NEW] 명명 규칙 체계** — 디자인 토큰 / 컴포넌트 / 파일명 / Figma 레이어 4종 규칙
+- **[NEW] 사용 예시** — IR·제안서 / 운영 대시보드(CSMS/EMS) / 충전기 UI / 현장 표시물 4개 시나리오
+- **[NEW] 금지 사례 12항 (D-01 ~ D-12)** — 브랜드 일관성·가독성을 해치는 패턴 명문화
+- **[NEW] DS 적용 체크리스트 (10항목)** — 30초 자가 점검 양식
+- **[NEW] 용어집 (Glossary)** — DS / 디자인 토큰 / Atomic Design / CSMS / EMS / PnC / WCAG AA / KPI 정의
+- **[NEW] 리소스 배포 링크** — Figma Library / GitHub Tokens / 아이콘 / 템플릿 / 사내 포털 / 이슈 트래커
 
 ---
 
-# 5. 사진 검수 가이드
+#### Added — Figma Specbook v1.0 (`EVR-DS-Figma-Specbook-v1.0`)
 
-* 정면 1컷
-* 좌/우 45도
-* 디테일 컷
-
----
-
-# 6. 운영 규칙
-
-* 모든 변경은 PR 기반
-* QA 기준 변경 시 전체 업데이트
+- **[NEW] Figma 파일 구조 표준화** — `[EVR] {도메인}·{자산}` 네이밍, 01_Cover ~ 05_Changelog 5개 페이지 체계
+- **[NEW] 컴포넌트 속성 · Variant · State 명세** — DS Guide 원칙을 Figma 구현값으로 번역
+- **[NEW] 프레임 명명 기준** — `{ScreenName}/{Size}/{Mode}` 패턴 (예: `Dashboard-KPI/Desktop-1440/Light`)
+- **[NEW] 레이어 명명 기준** — 컴포넌트명 + 역할 (예: `ButtonPrimary/Label`, `CardKPI/Trend`)
+- **[NEW] DS Guide 크로스 레퍼런스 규칙** — `Specbook → Guide` 참조 방향·표기 방식 정의
+- **[NEW] Figma Library 배포 채널** — Community 초대 전용 링크 운영 (`figma.com/@everon/everon-ds`)
 
 ---
 
-# 7. 확장 방향
+#### Added — Component QA SOP v1.0 (`EVR-DS-QA-SOP-v1.0`)
 
-* 앱 UI 연동
-* 스마트 충전 UX 연결
-* IoT 데이터 시각화
-
----
-
-# 8. CHANGELOG
-
-## [v1.0.0] - Initial Release
-
-### Added
-
-* Design System Guide 초안 정의
-* Figma Specbook 구조 설계
-* Design Token(JSON) v1.0 정의
-* EV 충전 존 공간 디자인 가이드
-* QA SOP 체크리스트 구축
+- **[NEW] Gate 기반 검수 프로세스 수립** — G1(토큰 매핑) → G2(컴포넌트 48항) → G3(접근성) → G4(Sign-off) 4단계
+- **[NEW] 릴리즈 체크리스트 20항목** — 스코프 / QA / 문서 / 자산 / 빌드 / 승인 / 배포 전 과정 점검
+- **[NEW] 파트너 수신 확인 체크리스트 5항목** — SHA256 검증 / GPG 서명 / MANIFEST 확인 절차
+- **[NEW] QASOP ↔ DS Guide 크로스 레퍼런스** — `QA B3 → Guide 2.2.3 + D-05` 형태 상호 참조 체계
 
 ---
 
-## [v1.1.0] - Brand Zone 고도화
+#### Added — 토큰 · 자산 · 패키지 인프라
 
-### Added
+- **[NEW] design-tokens.json** — Single Source of Truth, CSS / SCSS / Figma Tokens Studio 연동 4종 포맷
+- **[NEW] everon-icons v0.8.0** — SVG 80종 + WOFF2 아이콘 폰트, icons-index.json 매핑
+- **[NEW] PPT 템플릿 3종** — EVR-IR / EVR-Sales-Deck / EVR-Internal-Report
+- **[NEW] Word 템플릿 2종** — EVR-Proposal / EVR-Report
+- **[NEW] MANIFEST.json 스키마** — 패키지 버전·구성 요소·SHA256·호환성 자동 생성
+- **[NEW] 무결성 검증 파이프라인** — Build → Hash → Manifest → Lint → Diff → GPG Sign 6단계
+- **[NEW] 배포 채널 5종** — 사내 포털 / GitHub Releases(Private) / Figma Community / 파트너 포털 / 이메일 공지
+- **[NEW] Hotfix(P0) 절차** — T+0 탐지 ~ T+24h 배포 ~ T+7d 회고 6단계 SLA
+- **[NEW] Deprecation 3단계 정책** — Announce → Soft Freeze → Remove, 90일 전 통지 규칙
 
-* 라운드 프레임형 브랜드 존 패턴 추가
-* 벽면 그래픽 확장 규칙 정의
+---
 
 ### Changed
 
-* Primary Color 대비 개선 (접근성 기준 반영)
-* 주차 라인 두께 기준 80mm → 100mm 수정
+_초최 릴리즈로 해당 없음_
 
----
+### Deprecated
 
-## [v1.2.0] - Spec 정밀화
-
-### Added
-
-* Auto Layout 규칙 상세화
-* 컴포넌트 간격 토큰 확장
+_초최 릴리즈로 해당 없음_
 
 ### Fixed
 
-* 텍스트 정렬 오차 기준 수정
-* 로고 위치 가이드 보정
+_초최 릴리즈로 해당 없음_
 
 ---
 
-## [v1.3.0] - QA 체계 강화
+## [0.95] — 2026-05-18 · Internal Review Draft
 
-### Added
-
-* 시공 오차 허용 범위 정의 (mm 단위)
-* 사진 검수 가이드 추가
+> **배포 범위** DSWG / PMO 내부 검토용 (비공개)
 
 ### Changed
 
-* QA 체크리스트 단계별 분리 (사전/중간/완료)
+- **[IMPROVED] 컴포넌트 명명 규칙 구체화** — PascalCase + Variant-State 하이픈 결합 방식으로 정리
+- **[IMPROVED] 금지 사례 보강** — D-08(사이니지 3D 효과), D-09(비교 차트 기준 혼용), D-11(개인정보 마스킹) 추가
+- **[IMPROVED] 사이니지 컴포넌트 상세화** — 야간 가독성 7:1 대비비, 5m·3초 가독성 기준 명문화
+- **[IMPROVED] Figma Specbook 컴포넌트 Variant 구체화** — Button State 5단계, Card Shadow 토큰 정의
+- **[IMPROVED] QA SOP Gate 체계 재구성** — G1~G4 단계별 산출물·담당자·기준 명확화
+- **[IMPROVED] PMO 내부 리뷰 피드백 반영** — 차트 컬러 매핑 표 추가, 조판 규칙 보완
+
+### Fixed
+
+- **[FIXED]** 타이포그래피 Line-height 값 오기 수정 (H3: 1.35 → 1.3)
+- **[FIXED]** 상태 컬러 Warning HEX 오기 수정 (`#F59E0B` 통일)
+- **[FIXED]** 파일명 규칙 예시 오탈자 수정
 
 ---
 
-## [Unreleased]
+## [0.9] — 2026-04-27 · Initial Draft
 
-### Planned
+> **배포 범위** DSWG / 디자인팀 내부 초안 (비공개)
 
-* Figma Tokens 자동 연동
-* QA 모바일 체크 시스템
-* 스마트 충전 UX 연계 가이드
+### Added
+
+- **[NEW]** 컬러 시스템 초안 — Primary `#12AAE2` 및 보조 색상 시안
+- **[NEW]** 타이포그래피 초안 — Pretendard 서체 1순위 지정
+- **[NEW]** Figma 파일 구조 초안 — 페이지 체계 1차 설계
+- **[NEW]** Button / Card 컴포넌트 초안
+- **[NEW]** DS Guide 문서 골격 작성 (목차·섹션 구조)
 
 ---
 
-# 9. Git Tag 전략
+## 예정 릴리즈 로드맵
 
-## 🎯 Versioning Rule (Semantic Versioning 기반)
+> 아래 일정은 내부 계획이며 변경될 수 있습니다.
 
-형식:
+### [1.1.0] — 예정: 2026-Q3
+
+- **[NEW]** Stepper 컴포넌트 추가
+- **[NEW]** 다국어 지원 — 일본어(NotoSansJP) 타이포그래피 가이드
+- **[NEW]** 모바일 사이니지 컴포넌트 (QR/NFC 안내 패널)
+- **[NEW]** EVR-Finance-Report 템플릿 추가
+- **[IMPROVED]** Button에 'link' Variant 추가
+- **[IMPROVED]** DashboardKPIGroup 반응형 레이아웃 가이드
+
+### [1.0.1] — 예정: 2026-Q3 (필요 시)
+
+- **[FIXED]** 발견된 오탈자 · 링크 오류 · 아이콘 픽셀 보정
+
+### [2.0.0] — 미정
+
+- **[BREAKING]** 브랜드 리프레시 시 컬러 팔레트 전면 교토
+- **[BREAKING]** Component Property 이름 체계 재정비
+
+---
+
+## 변경 이력 관리 원칙
 
 ```
-vMAJOR.MINOR.PATCH
-```
-
-### 기준
-
-* **MAJOR (v1 → v2)**
-
-  * 디자인 시스템 구조 변경
-  * 기존 호환성 깨짐 (Breaking Change)
-
-* **MINOR (v1.0 → v1.1)**
-
-  * 새로운 컴포넌트 / 패턴 추가
-  * 기존 시스템 확장
-
-* **PATCH (v1.0.0 → v1.0.1)**
-
-  * 버그 수정
-  * 수치 보정 / 오타 수정
-
----
-
-## 📌 Tag 네이밍 규칙
-
-* `v1.0.0` → 초기 릴리즈
-* `v1.1.0` → 기능 추가
-* `v1.1.1` → QA 수정
-
----
-
-## 🚀 Release 프로세스
-
-1. feature 브랜치 작업
-2. develop 브랜치 merge
-3. QA 검증 완료
-4. main 브랜치 merge
-5. Tag 생성
-
-```bash
-git tag v1.1.0
-git push origin v1.1.0
-```
-
----
-
-## 🧭 브랜치 전략
-
-* main: 릴리즈 버전
-* develop: 통합 개발
-* feature/*: 기능 단위 작업
-* hotfix/*: 긴급 수정
-
----
-
-# 10. Pull Request 템플릿
-
-## 📄 PR Title 규칙
-
-```
-[type] 간단한 설명
-```
-
-예:
-
-* feat: EV Zone 패턴 추가
-* fix: 로고 정렬 오류 수정
-* chore: 토큰 구조 정리
-
----
-
-## 🧾 PR Template
-
-```markdown
-## 🔍 변경 내용
-- 무엇을 변경했는지 명확히 작성
-
-## 🎯 변경 이유
-- 왜 이 변경이 필요한지 설명
-
-## 🧩 작업 범위
-- [ ] DS Guide
-- [ ] Figma Specbook
-- [ ] QA SOP
-
-## ⚠️ 영향도
-- [ ] 기존 디자인 영향 없음
-- [ ] 일부 컴포넌트 영향
-- [ ] 전체 시스템 영향
-
-## 🖼 Before / After
-- (이미지 또는 링크 첨부)
-
-## ✅ 체크리스트
-- [ ] 디자인 원칙 준수
-- [ ] 토큰 일관성 유지
-- [ ] QA 기준 영향 검토
-- [ ] 문서 업데이트 완료
-
-## 🧪 QA 확인
-- 테스트 완료 여부 작성
-
-## 🔗 관련 이슈
-- Closes #issue_number
+1. 모든 변경 사항은 PR merge 시점에 이 파일에 기록합니다.
+2. 섹션 순서: Added → Changed → Deprecated → Fixed → Security
+3. 각 항목은 '[태그] 변경 내용' 형식으로 작성합니다.
+4. Breaking Change는 반드시 [BREAKING] 태그를 명시합니다.
+5. 비공개 내부 버전(0.x)은 배포 후 소급 기재합니다.
 ```
 
 ---
 
-## 💡 운영 팁
-
-* PR은 작게 나누는 것이 좋음 (1 기능 = 1 PR)
-* 최소 1명 이상 리뷰 필수
-* 디자인 변경은 반드시 시각 자료 포함
-
----
-
-# 11. GitHub Issue 템플릿
-
-## 🐞 Bug Report (버그)
-
-```markdown
-## 🐞 문제 설명
-- 발생한 문제를 구체적으로 작성
-
-## 📍 발생 위치
-- 페이지 / 컴포넌트 / 공간 위치
-
-## 🔁 재현 방법
-1. 
-2. 
-3. 
-
-## 🎯 기대 결과
-- 정상 동작 또는 기대 상태 설명
-
-## 📸 스크린샷
-- (가능하면 첨부)
-
-## 🧪 환경
-- OS:
-- Browser:
-- 디바이스:
-
-## ⚠️ 영향도
-- [ ] 낮음
-- [ ] 중간
-- [ ] 높음 (서비스 영향)
-```
-
----
-
-## 🎨 Design Request (디자인 요청)
-
-```markdown
-## 🎨 요청 내용
-- 필요한 디자인 작업 설명
-
-## 🎯 목적
-- 왜 필요한지 (비즈니스/UX 관점)
-
-## 📍 적용 범위
-- [ ] DS Guide
-- [ ] Figma Specbook
-- [ ] 공간 디자인
-
-## 🧩 참고 자료
-- 레퍼런스 링크 / 이미지
-
-## ⏱ 우선순위
-- [ ] Low
-- [ ] Medium
-- [ ] High
-
-## 📅 희망 일정
-- 
-```
-
----
-
-## 🏗 Construction Issue (시공 이슈)
-
-```markdown
-## 🏗 이슈 내용
-- 현장에서 발생한 문제 설명
-
-## 📍 위치
-- 주차장 / 층 / 구역
-
-## 📏 실제 시공 상태
-- (치수, 오차 등 구체적으로 작성)
-
-## 🎯 기준 대비 문제
-- 어떤 기준과 다른지 명시 (DS / 도면 / QA)
-
-## 📸 현장 사진
-- 필수 첨부
-
-## ⚠️ 영향도
-- [ ] 경미
-- [ ] 기능 영향
-- [ ] 안전 문제
-
-## 🛠 요청 조치
-- 수정 / 재시공 / 검토 등
-
-## 👷 담당자
-- 
-```
-
----
-
-## 💡 운영 팁
-
-* Issue는 반드시 **유형(label)** 구분
-
-  * bug
-  * design
-  * construction
-
-* 시공 이슈는 항상 **사진 + 치수 포함**
-
-* 디자인 요청은 반드시 **목적 포함**
-  
+<p align="center">
+  <sub>everon Design System · CHANGELOG · DS Working Group · 2026</sub>
+</p>
