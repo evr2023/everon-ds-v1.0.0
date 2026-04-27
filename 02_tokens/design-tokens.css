@@ -1,0 +1,8 @@
+/* 02_tokens/design-tokens.css */
+:root {
+  --color-primary:       #12AAE2;
+  --color-primary-deep:  #0A6E95;
+  --font-family-base:    Pretendard, NanumGothic, sans-serif;
+  --radius-md:           8px;
+  --shadow-card:         0 2px 8px rgba(17,17,17,0.06);
+}
