@@ -1,5 +1,3 @@
-# everon-ds-v1.0.0
-에버온 브랜드의 일관된 사용자 경험과 시공 품질을 유지하기 위한  
 **Design System · Figma Specbook · QA SOP 통합 가이드 저장소**입니다.
 
 ---
