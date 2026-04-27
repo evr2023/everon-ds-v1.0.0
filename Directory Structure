@@ -1,0 +1,44 @@
+everon-ds-v1.0.0/
+├── 00_README.md                          ← 프로젝트 소개, 설치/사용 방법
+├── 00_CHANGELOG.md                       ← 버전별 변경 이력 전체
+├── 00_LICENSE.md                         ← 사용 권한·제한
+├── 00_MANIFEST.json                      ← 패키지 메타데이터 (자동 생성)
+│
+├── 01_docs/                              ← 배포용 문서 3종
+│   ├── EVR-DS-Guide-v1.0.docx
+│   ├── EVR-DS-Guide-v1.0.pdf
+│   ├── EVR-DS-Figma-Specbook-v1.0.docx
+│   ├── EVR-DS-Figma-Specbook-v1.0.pdf
+│   ├── EVR-DS-QA-SOP-v1.0.docx
+│   └── EVR-DS-QA-SOP-v1.0.pdf
+│
+├── 02_tokens/                            ← 디자인 토큰 (개발 소비용)
+│   ├── design-tokens.json                ← 단일 원본(Source of Truth)
+│   ├── design-tokens.css                 ← CSS Custom Properties
+│   ├── design-tokens.scss                ← SCSS Variables
+│   └── design-tokens.figma.json          ← Figma Tokens Studio 연동용
+│
+├── 03_icons/                             ← 아이콘 자산
+│   ├── svg/                              ← 80종, icon/{cat}/{name}.svg
+│   ├── everon-icons.woff2                ← 아이콘 폰트
+│   ├── icons-index.json                  ← 이름·유니코드 매핑
+│   └── icons-preview.pdf                 ← 썸네일 한 장
+│
+├── 04_templates/                         ← 제작 템플릿
+│   ├── ppt/
+│   │   ├── EVR-IR-Template-v1.0.pptx
+│   │   ├── EVR-Sales-Deck-Template-v1.0.pptx
+│   │   └── EVR-Internal-Report-Template-v1.0.pptx
+│   ├── word/
+│   │   ├── EVR-Proposal-Template-v1.0.docx
+│   │   └── EVR-Report-Template-v1.0.docx
+│   └── figma-community-link.md           ← Figma 공개 링크 안내
+│
+├── 05_samples/                           ← 참고 샘플·치트시트
+│   ├── cheatsheet-1page.pdf              ← 한 장 요약
+│   ├── do-dont-examples.pdf              ← 금지·권장 사례집
+│   └── kpi-card-variations.png
+│
+└── 99_release-notes/                     ← 릴리즈 노트 상세
+    ├── v1.0.0-release-note.md
+    └── migration-guide-from-v0.9.md
