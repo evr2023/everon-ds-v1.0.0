@@ -5,7 +5,7 @@
 [![Release](https://img.shields.io/badge/release-v1.0.0-12AAE2?style=flat-square)](https://github.com/everon/everon-ds/releases/tag/v1.0.0)
 [![License](https://img.shields.io/badge/license-Everon%20Proprietary-1A2C5B?style=flat-square)](#license)
 [![DS Guide](https://img.shields.io/badge/docs-DS%20Guide%20v1.0-0A6E95?style=flat-square)](./01_docs/EVR-DS-Guide-v1.0.pdf)
-[![Figma](https://img.shields.io/badge/Figma-everon--ds%20Library-12AAE2?style=flat-square&logo=figma&logoColor=white)](https://figma.com/@everon-develop/에버온 앱_차기ver)
+[![Figma](https://img.shields.io/badge/Figma-everon--ds%20Library-12AAE2?style=flat-square&logo=figma&logoColor=white)](https://figma.com/@everon_develop)
 [![Slack](https://img.shields.io/badge/Slack-%23ds--release-6B7280?style=flat-square&logo=slack)](https://everon.slack.com/channels/ds-release)
 
 ---
@@ -62,17 +62,17 @@ Credibility  검증된 데이터와 절제된 표현으로 신뢰를 준다.
 
 `everon-ds v1.0.0` 릴리즈는 아래 9개 구성 요소를 **단일 ZIP**으로 묶어 배포합니다.
 
-| # | 구성 요소 | 형식 | 필수 |
-|---|-----------|------|------|
-| 1 | **DS Guide v1.0** | DOCX + PDF | ✅ |
-| 2 | **Figma Library Specbook v1.0** | DOCX + PDF | ✅ |
-| 3 | **Component QA SOP v1.0** | DOCX + PDF | ✅ |
-| 4 | Design Tokens | JSON · CSS · SCSS | ✅ |
-| 5 | Icon Set | SVG · WOFF2 | ✅ |
-| 6 | PPT / Word 템플릿 | PPTX · DOCX | ✅ |
-| 7 | Changelog / Release Notes | MD | ✅ |
-| 8 | License / README | MD | ✅ |
-| 9 | Sample / Cheatsheet | PDF · PNG | 선택 |
+| # |             구성 요소             |        형식        | 필수 |
+|---|---------------------------------|-------------------|-----|
+| 1 | **DS Guide v1.0**               | DOCX + PDF        |  ✅ |
+| 2 | **Figma Library Specbook v1.0** | DOCX + PDF        |  ✅ |
+| 3 | **Component QA SOP v1.0**       | DOCX + PDF        |  ✅ |
+| 4 | Design Tokens                   | JSON · CSS · SCSS |  ✅ |
+| 5 | Icon Set                        | SVG · WOFF2       |  ✅ |
+| 6 | PPT / Word 템플릿                 | PPTX · DOCX       |  ✅ |
+| 7 | Changelog / Release Notes       | MD                |  ✅ |
+| 8 | License / README                | MD                |  ✅ |
+| 9 | Sample / Cheatsheet             | PDF · PNG         | 선택 |
 
 > **3종 문서는 분리 배포되지 않습니다.**  
 > DS Guide만 수정하고 Figma Specbook · QA SOP를 그대로 두는 것은 금지입니다.  
@@ -89,7 +89,7 @@ Credibility  검증된 데이터와 절제된 표현으로 신뢰를 준다.
 │   DS Guide   │ ──────────▶ │  Figma Specbook   │ ──────────▶ │    QA SOP     │
 │ (원칙·토큰)  │               │  (속성·Variant)    │             │   (검수 기준)    │
 └──────┬───────┘             └─────────┬─────────┘             └───────┬───────┘
-       │                               │                                │
+       │                               │                               │
        └──────── 공통 참조: design-tokens.json · everon-icons ───────────┘
                                        │
               모든 제작물(IR·대시보드·UI·사이니지·인쇄물)이 3문서를 동시 참조
@@ -105,15 +105,15 @@ Credibility  검증된 데이터와 절제된 표현으로 신뢰를 준다.
 
 #### 컬러 시스템
 
-| 토큰 | HEX | 용도 |
-|------|-----|------|
-| `color-primary` | `#12AAE2` | 브랜드 강조, CTA 버튼, KPI 숫자 |
-| `color-primary-deep` | `#0A6E95` | 헤더·타이틀 보조 |
-| `color-neutral-dark` | `#1A2C5B` | 본문 강조, 표 헤더 |
-| `color-accent-red` | `#E8231A` | 경고·오류 상태 |
-| `color-accent-green` | `#00B15A` | 정상·성공 상태 |
-| `color-neutral-mid` | `#6B7280` | 보조 텍스트 |
-| `color-bg-subtle` | `#F5F6FA` | 배경·카드 바탕 |
+|          토큰         |     HEX   |          용도               |
+|----------------------|-----------|----------------------------|
+| `color-primary`      | `#12AAE2` | 브랜드 강조, CTA 버튼, KPI 숫자 |
+| `color-primary-deep` | `#0A6E95` | 헤더·타이틀 보조               |
+| `color-neutral-dark` | `#1A2C5B` | 본문 강조, 표 헤더             |
+| `color-accent-red`   | `#E8231A` | 경고·오류 상태                |
+| `color-accent-green` | `#00B15A` | 정상·성공 상태                |
+| `color-neutral-mid`  | `#6B7280` | 보조 텍스트                  |
+| `color-bg-subtle`    | `#F5F6FA` | 배경·카드 바탕                |
 
 **60 · 30 · 10 원칙** — 한 화면에서 Primary는 반드시 10% 강조 포인트로만 사용합니다.
 
@@ -143,14 +143,14 @@ Signage    충전기 번호판 · 상태 LED · 현장 안내판
 
 #### 금지 사례 — 주요 12항
 
-| ID | 금지 내용 |
-|----|-----------|
-| D-01 | Primary 컬러를 한 화면에 여러 번 반복 사용 |
-| D-03 | Pretendard / NanumGothic 외 장식체 사용 |
-| D-05 | 의미를 색상만으로 전달 (아이콘·레이블 병기 필수) |
+|  ID  |              금지 내용                   |
+|------|----------------------------------------|
+| D-01 | Primary 컬러를 한 화면에 여러 번 반복 사용     |
+| D-03 | Pretendard / NanumGothic 외 장식체 사용   |
+| D-05 | 의미를 색상만으로 전달 (아이콘·레이블 병기 필수)  |
 | D-06 | DS 외부 아이콘 혼용 (everon-icons 단일 사용) |
-| D-07 | 출처·기간·단위 없는 차트 |
-| D-10 | 승인되지 않은 로고 변형 |
+| D-07 | 출처·기간·단위 없는 차트                    |
+| D-10 | 승인되지 않은 로고 변형                     |
 
 > 전체 12항은 [`01_docs/EVR-DS-Guide-v1.0.pdf`](./01_docs/EVR-DS-Guide-v1.0.pdf) §6 참조
 
@@ -363,12 +363,12 @@ CSS Custom Properties로도 동일하게 사용 가능합니다:
 
 `everon-ds`는 **Semantic Versioning (MAJOR.MINOR.PATCH)** 을 따릅니다.
 
-| 변경 유형 | SemVer | 사전 공지 |
-|-----------|--------|-----------|
-| 브랜드 컬러·폴더 구조·Component Property 이름 변경 | **MAJOR** | 90일 전 |
-| 신규 컴포넌트·Variant·템플릿 추가 | **MINOR** | 릴리즈 공지 |
-| 오탈자·아이콘 픽셀·링크 수정 | **PATCH** | 불필요 |
-| Deprecated 컴포넌트 제거 | **MAJOR** | 90일 전 + 1 MINOR 유예 |
+|                 변경 유형                      |  SemVer  |       사전 공지        |
+|---------------------------------------------|-----------|---------------------|
+| 브랜드 컬러·폴더 구조·Component Property 이름 변경 | **MAJOR** | 90일 전               |
+| 신규 컴포넌트·Variant·템플릿 추가                 | **MINOR** | 릴리즈 공지            |
+| 오탈자·아이콘 픽셀·링크 수정                      | **PATCH** | 불필요                 |
+| Deprecated 컴포넌트 제거                       | **MAJOR** | 90일 전 + 1 MINOR 유예 |
 
 ### 브랜치 전략
 
@@ -416,15 +416,15 @@ T+7d  사후 회고 + CAPA 문서화             DSWG
 
 ## 9. 연락처
 
-| 채널 | 용도 | 주소 |
-|------|------|------|
-| **DS Working Group** | 일반 문의·기여 제안 | ds@everon.co.kr |
-| **QA 문의** | 검수 기준·Gate 질문 | ds-qa@everon.co.kr |
-| **릴리즈 공지 구독** | 버전 업데이트 수신 | ds-release@everon.co.kr |
-| **긴급 P0** | 크리티컬 이슈 | Slack `#ds-p0` |
-| **라이선스 문의** | 재배포·파생물 | legal@everon.co.kr |
-| **사내 포털** | 패키지 다운로드 | intranet.everon.co.kr/ds |
-| **이슈 트래커** | 버그·기능 요청 | intranet.everon.co.kr/ds/issues |
+|          채널         |        용도       |              주소               |
+|----------------------|------------------|--------------------------------|
+| **DS Working Group** | 일반 문의·기여 제안  | ds@everon.co.kr                |
+| **QA 문의**           | 검수 기준·Gate 질문 | ds-qa@everon.co.kr             |
+| **릴리즈 공지 구독**     | 버전 업데이트 수신   | ds-release@everon.co.kr        |
+| **긴급 P0**           | 크리티컬 이슈       | Slack `#ds-p0`                 |
+| **라이선스 문의**       | 재배포·파생물       | legal@everon.co.kr             |
+| **사내 포털**          | 패키지 다운로드     | intranet.everon.co.kr/ds        |
+| **이슈 트래커**         | 버그·기능 요청     | intranet.everon.co.kr/ds/issues |
 
 ---
 
